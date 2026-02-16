@@ -7,12 +7,12 @@ import java.math.BigDecimal;
 
 @Entity
 @Data
-public class Produto {
+public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "Nome é obrigatório!!")
+    @NotBlank(message = "O nome é obrigatório!!")
     @Column(nullable = false)
     private String nome;
 
@@ -24,7 +24,7 @@ public class Produto {
     private String categoria;
 
     @NotNull
-    @PositiveOrZero(message = "Preço não pode ser negativo!!")
+    @PositiveOrZero(message = "O preço não pode ser negativo!!")
     @Column(nullable = false)
     private BigDecimal preco;
 }
