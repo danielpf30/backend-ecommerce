@@ -1,0 +1,53 @@
+### 1. LISTAR TUDO (GET)
+GET http://localhost:8080/products
+
+###
+
+### 2. CRIAR PRODUTO 1 (POST)
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "Notebook Gamer",
+  "description": "i7, 16GB RAM, RTX 3060",
+  "price": 5500.00,
+  "category": "Informatica"
+}
+
+###
+
+### 3. CRIAR PRODUTO 2 (POST)
+POST http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "name": "Livro Java Experience",
+  "description": "Aprenda Spring Boot do zero",
+  "price": 89.90,
+  "category": "Livros"
+}
+
+###
+
+### 4. BUSCAR POR CATEGORIA (GET)
+GET http://localhost:8080/products/category/Informatica
+
+###
+
+### 5. ATUALIZAR PREÇO (PUT)
+# Atenção: O ID aqui (1) tem que existir no banco!
+PUT http://localhost:8080/products
+Content-Type: application/json
+
+{
+  "id": 4,
+  "name": "Notebook Gamer PRO",
+  "description": "Agora com 32GB RAM e SSD 1TB",
+  "price": 6200.00,
+  "category": "Informatica"
+}
+
+###
+
+### 6. DELETAR (DELETE)
+DELETE http://localhost:8080/products/4
